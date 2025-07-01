@@ -1,0 +1,165 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #003f5c;
+      background: #e0f7fa;
+    }
+
+    /* NAVBAR */
+    nav {
+      background-color: #006994;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav h2 { font-size: 1.8rem; }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav li:hover { color: #00e0ff; cursor: pointer; }
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 2rem;
+        background-color: #006994;
+        width: 150px;
+        border-radius: 10px;
+        padding: 1rem;
+      }
+      nav ul.active {
+        display: flex;
+      }
+      .menu-icon { display: flex; }
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      background: linear-gradient(to bottom right, #00bcd4, #006994);
+      color: white;
+    }
+    .hero-text {
+      flex: 1;
+      padding-right: 2rem;
+    }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1.3rem; margin-bottom: 2rem; }
+    .cta-button {
+      padding: 1rem 2rem;
+      background: #fff;
+      color: #006994;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .cta-button:hover { background: #e0f7fa; }
+
+    .hero-img {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-text {
+        padding-right: 0;
+      }
+    }
+
+    /* FEATURES, TESTIMONIALS, CONTACT, FOOTER (same styling as before) */
+    .features, .testimonials, .contact {
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .features h2, .testimonials h2, .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .feature-box {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      max-width: 300px;
+    }
+
+    .testimonials { background: #b2ebf2; }
+    .testimonial {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding: 1.5rem;
+      background: white;
+      border-radius: 15px;
+      font-style: italic;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 10px;
+      border: none;
+      font-size: 1rem;
+    }
+    .contact-form button {
+      padding: 1rem 2rem;
+      background: #006994;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #004d61;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
